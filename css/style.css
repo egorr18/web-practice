@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #333;
+}
+
+nav ul li {
+    border-bottom: 1px solid #555;
+}
+
+nav ul li:last-child {
+    border-bottom: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
+nav ul li a:focus {
+    outline: 2px solid #4CAF50;
+    outline-offset: -2px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main section {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+main section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    padding: 2px 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+main ul {
+    padding-left: 20px;
+}
+
+main ul li {
+    margin-bottom: 10px;
+}
+
+main ul li a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+main ul li a:hover {
+    text-decoration: underline;
+}
+
+img {
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+b {
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        border-bottom: none;
+        border-right: 1px solid #555;
+    }
+    
+    nav ul li:last-child {
+        border-right: none;
+    }
+    
+    main {
+        padding: 30px;
+    }
+}
+

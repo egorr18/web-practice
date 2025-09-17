@@ -1,0 +1,134 @@
+.schedule-container {
+    overflow-x: auto;
+    margin: 20px 0;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    padding: 10px;
+    background: white;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    min-width: 600px;
+}
+
+.schedule-table th,
+.schedule-table td {
+    border: 2px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.schedule-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.time-header {
+    background-color: #2E7D32 !important;
+}
+
+.time-cell {
+    background-color: #e8f5e8;
+    font-weight: bold;
+    color: #2E7D32;
+}
+
+.lecture {
+    background-color: #E3F2FD;
+    border-left: 4px solid #2196F3;
+}
+
+.practice {
+    background-color: #FFF3E0;
+    border-left: 4px solid #FF9800;
+}
+
+.lab {
+    background-color: #E8F5E9;
+    border-left: 4px solid #4CAF50;
+}
+
+.empty {
+    background-color: #f9f9f9;
+    color: #999;
+}
+
+.schedule-legend {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.schedule-legend h3 {
+    margin-top: 0;
+    color: #2E7D32;
+}
+
+.legend-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.color-box.lecture {
+    background-color: #E3F2FD;
+    border: 2px solid #2196F3;
+}
+
+.color-box.practice {
+    background-color: #FFF3E0;
+    border: 2px solid #FF9800;
+}
+
+.color-box.lab {
+    background-color: #E8F5E9;
+    border: 2px solid #4CAF50;
+}
+
+@media (max-width: 768px) {
+    .schedule-table {
+        font-size: 12px;
+    }
+    
+    .schedule-table th,
+    .schedule-table td {
+        padding: 8px;
+    }
+    
+    .legend-items {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.schedule-table strong {
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.schedule-table td {
+    line-height: 1.4;
+}

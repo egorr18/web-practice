@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лабораторні роботи</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../schedule/style.css">
-
 </head>
 <body>
-
     <header>
         <h1>Лабораторні роботи</h1>
     </header>
@@ -18,117 +15,39 @@
         <ul>
             <li><a href="../index.html">Головна</a></li>
             <li><a href="about.html">Про мене</a></li>
-            <li><a href="practice.html">Практичні роботи</a></li>
+            <li><a href="practice.html">Практичні заняття</a></li>
             <li><a href="labs.html">Лабораторні роботи</a></li>
-            <li><a href="lectures.html">Лекції</a></li>
         </ul>
     </nav>
 
     <main>
-        <section class="practice-section">
-            <h2>Лабораторні роботи - Розклад занять</h2>
-            <p>Розклад лабораторних занять на вересень 2025 для групи ТЦР-21:</p>
-            
-            <div class="schedule-container">
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th class="time-header">Час/День</th>
-                            <th>09.09</th>
-                            <th>10.09</th>
-                            <th>12.09</th>
-                            <th>17.09</th>
-                            <th>24.09</th>
-                            <th>26.09</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="time-cell">9:45-11:20</td>
-                            <td class="lab">
-                                <strong>Інноваційне підприємництво</strong><br>
-                                (Лб)<br>
-                                ауд. 201<br>
-                                Бажан Т.О.
-                            </td>
-                            <td class="empty"></td>
-                            <td class="empty"></td>
-                            <td class="empty"></td>
-                            <td class="empty"></td>
-                            <td class="empty"></td>
-                        </tr>
-                        <tr>
-                            <td class="time-cell">11:45-13:20</td>
-                            <td class="empty"></td>
-                            <td class="lab">
-                                <strong>WEB-технології</strong><br>
-                                (Лб)<br>
-                                ауд. 211<br>
-                                Дзюба В.В.
-                            </td>
-                            <td class="lab">
-                                <strong>ООП C#</strong><br>
-                                (Лб)<br>
-                                ауд. 221<br>
-                                Чернявський Ж.А.
-                            </td>
-                            <td class="lab">
-                                <strong>WEB-технології</strong><br>
-                                (Лб)<br>
-                                ауд. 512<br>
-                                Дзюба В.В.
-                            </td>
-                            <td class="lab">
-                                <strong>WEB-технології</strong><br>
-                                (Лб)<br>
-                                ауд. 211<br>
-                                Дзюба В.В.
-                            </td>
-                            <td class="lab">
-                                <strong>ООП C#</strong><br>
-                                (Лб)<br>
-                                ауд. 221<br>
-                                Чернявський Ж.А.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="time-cell">13:30-15:05</td>
-                            <td class="empty"></td>
-                            <td class="lab">
-                                <strong>Вища математика</strong><br>
-                                (Лб)<br>
-                                ауд. 517<br>
-                                Шкапа В.В.
-                            </td>
-                            <td class="lab">
-                                <strong>Аналіз вимог до ПЗ</strong><br>
-                                (Лб)<br>
-                                ауд. 325<br>
-                                Сватко В.В.
-                            </td>
-                            <td class="lab">
-                                <strong>Аналіз вимог до ПЗ</strong><br>
-                                (Лб)<br>
-                                ауд. 225<br>
-                                Сватко В.В.
-                            </td>
-                            <td class="lab">
-                                <strong>Вища математика</strong><br>
-                                (Лб)<br>
-                                ауд. 517<br>
-                                Шкапа В.В.
-                            </td>
-                            <td class="lab">
-                                <strong>Аналіз вимог до ПЗ</strong><br>
-                                (Лб)<br>
-                                ауд. 325<br>
-                                Сватко В.В.
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <section>
+            <h2>Лабораторні роботи</h2>
+            <p>Список лабораторних робіт для групи ТЦР-21:</p>
+            <ul>
+                <li><a href="#lab1">Лабораторна робота №1: Форма реєстрації</a></li>
+            </ul>
 
+            <div id="lab1" class="lab-section">
+                <h3>Лабораторна робота №1: Форма реєстрації</h3>
+                <p><strong>Завдання:</strong> Створити HTML-форму для реєстрації користувача з полями для імені, email та пароля, а також кнопкою відправки.</p>
+                <p><strong>Опис:</strong> Форма повинна бути стилізованою та відповідати базовим стандартам валідації (наприклад, email).</p>
+
+                <form action="https://your-webhook-url" method="POST" onsubmit="return validateForm()">
+                    <label for="name">Ім'я:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="password">Пароль:</label><br>
+                    <input type="password" id="password" name="password" required><br><br>
+
+                    <button type="submit">Зареєструватися</button>
+                </form>
+
+                <p><strong>Примітка:</strong> Для підключення до реального webhook (наприклад, через n8n), замініть `https://your-webhook-url` на дійсний URL.</p>
+            </div>
         </section>
     </main>
 
@@ -136,5 +55,22 @@
         <p>2025 Король Єгор</p>
     </footer>
 
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            if (name === "" || email === "" || password === "") {
+                alert("Усі поля мають бути заповнені!");
+                return false;
+            }
+            if (!email.includes("@")) {
+                alert("Некоректний email!");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>

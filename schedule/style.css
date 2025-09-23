@@ -55,6 +55,40 @@
     border-left: 4px solid #4CAF50;
 }
 
+.lab-section form {
+    background-color: #e0f7fa; 
+    color: #00695c;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin: 20px auto; 
+}
+
+.lab-section form input[type="text"],
+.lab-section form input[type="email"],
+.lab-section form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #00695c;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.lab-section form button {
+    background-color: #026e5c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.lab-section form button:hover {
+    background-color: #209603;
+}
+
 .empty {
     background-color: #f9f9f9;
     color: #999;

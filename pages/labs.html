@@ -23,56 +23,47 @@
 
     <main>
         <section>
-            <h2>Лабораторні роботи</h2>
-            <p>Список лабораторних робіт для групи ТЦР-21:</p>
-            <ul>
-                <li><a href="#lab1">Лабораторна робота №1: Форма реєстрації</a></li>
-                <li><a href="../lab2/lab2.html">Лабораторна робота №2</a></li>
-            </ul>
+        <h2>Лабораторні роботи</h2>
+        <p>Список лабораторних робіт для групи ТЦР-21:</p>
+        <ul>
+            <li><a href="#lab1">Лабораторна робота №1: Форма реєстрації</a></li>
+            <li><a href="../lab2/lab2.html">Лабораторна робота №2</a></li>
+        </ul>
 
             <div id="lab1" class="lab-section">
                 <h3>Лабораторна робота №1: Форма реєстрації</h3>
                 <p><strong>Завдання:</strong> Створити HTML-форму для реєстрації користувача з полями для імені, email та пароля, а також кнопкою відправки.</p>
                 <p><strong>Опис:</strong> Форма повинна бути стилізованою та відповідати базовим стандартам валідації (наприклад, email).</p>
 
-                <form action="https://your-webhook-url" method="POST" onsubmit="return validateForm()">
-                    <label for="name">Ім'я:</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
-
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
-
-                    <label for="password">Пароль:</label><br>
-                    <input type="password" id="password" name="password" required><br><br>
-
-                    <button type="submit">Зареєструватися</button>
+                <form action="https://webhook.site/706e24df-f76d-4946-9708-40ba5331dafd" method="POST">
+                <label for="firstName">Ім'я користувача:</label><br>
+                <input type="text" id="firstName" name="firstName" required><br><br>
+                <label for="lastName">Прізвище користувача:</label><br>
+                <input type="text" id="lastName" name="lastName" required><br><br>
+                <label for="email">Адреса електронної пошти:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="password">Пароль:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <label for="confirmPassword">Підтвердження паролю:</label><br>
+                <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+                <label for="birthdate">Дата народження:</label><br>
+                <input type="date" id="birthdate" name="birthdate"><br><br>
+                <label for="gender">Стать:</label><br>
+                <select id="gender" name="gender">
+                    <option value="">Оберіть стать</option>
+                    <option value="male">Чоловік</option>
+                    <option value="female">Жінка</option>
+                    <option value="other">Інше</option>
+                </select><br><br>
+                <button type="submit">Зареєструватися</button>
                 </form>
-
-                <p><strong>Примітка:</strong> Для підключення до реального webhook (наприклад, через n8n), замініть `https://your-webhook-url` на дійсний URL.</p>
             </div>
         </section>
+
     </main>
 
     <footer>
         <p>2025 Король Єгор</p>
     </footer>
-
-    <script>
-        function validateForm() {
-            let name = document.getElementById("name").value;
-            let email = document.getElementById("email").value;
-            let password = document.getElementById("password").value;
-
-            if (name === "" || email === "" || password === "") {
-                alert("Усі поля мають бути заповнені!");
-                return false;
-            }
-            if (!email.includes("@")) {
-                alert("Некоректний email!");
-                return false;
-            }
-            return true;
-        }
-    </script>
 </body>
 </html>

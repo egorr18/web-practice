@@ -1,0 +1,61 @@
+@import "variables";
+
+.page {
+  background: $color-bg;
+  min-height: 100vh;
+  padding: $padding-base;
+  color: $color-text;
+  font-family: Arial, sans-serif;
+  text-align: center;
+
+  &__title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: $color-accent;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+}
+
+.card {
+  background: $color-card;
+  border-radius: $radius-base;
+  padding: $padding-base;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+
+  &__image {
+    width: 200px;
+    margin-bottom: 20px;
+    filter: brightness(1); 
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: $color-accent;
+  color: $color-bg;
+  text-decoration: none;
+  border-radius: $radius-base;
+  font-weight: bold;
+  transition: 0.3s;
+
+  &--big {
+    font-size: 18px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

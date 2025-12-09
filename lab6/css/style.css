@@ -1,4 +1,3 @@
-/* ===== БАЗА ===== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +13,6 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* ===== СЦЕНА ===== */
 .scene {
   position: relative;
   width: 800px;
@@ -24,7 +22,6 @@ body {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
 }
 
-/* === Анімація фону: небо (градієнт день → ніч) === */
 .sky {
   position: absolute;
   inset: 0;
@@ -35,17 +32,16 @@ body {
 
 @keyframes skyCycle {
   0% {
-    background: linear-gradient(to top, #4facfe, #00f2fe); /* день */
+    background: linear-gradient(to top, #4facfe, #00f2fe);
   }
   50% {
-    background: linear-gradient(to top, #304ffe, #00b0ff); /* вечір */
+    background: linear-gradient(to top, #304ffe, #00b0ff);
   }
   100% {
-    background: linear-gradient(to top, #0b1020, #1a237e); /* ніч */
+    background: linear-gradient(to top, #0b1020, #1a237e);
   }
 }
 
-/* Хмари (рух по X) */
 .cloud {
   position: absolute;
   top: 70px;
@@ -83,7 +79,6 @@ body {
   }
 }
 
-/* Гори (легкий паралакс) */
 .mountains {
   position: absolute;
   bottom: 120px;
@@ -110,7 +105,6 @@ body {
   }
 }
 
-/* Земля (рух repeating-gradient → ефект бігу) */
 .ground {
   position: absolute;
   left: 0;
@@ -140,15 +134,13 @@ body {
   }
 }
 
-/* === Анімація спрайта Пікачу з sprite sheet === */
-/* pikachu-sheet.png: 4 кадри по 96x96, у ряд */
 .pokemon {
   position: absolute;
-  bottom: 120px;   /* ставимо на землю */
+  bottom: 120px;
   left: 140px;
 
-  width: 96px;     /* ширина одного кадру */
-  height: 96px;    /* висота одного кадру */
+  width: 96px;
+  height: 96px;
 
   background-image: url("../images/pikachu-sheet.png");
   background-repeat: no-repeat;
@@ -156,13 +148,11 @@ body {
   image-rendering: pixelated;
   z-index: 4;
 
-  /* 4 кадри + стрибок */
   animation:
     runSprite 0.8s steps(4) infinite,
     jump 1.1s ease-in-out infinite;
 }
 
-/* Перемикання кадрів спрайта: 4 * 96 = 384px */
 @keyframes runSprite {
   from {
     background-position: 0 0;
@@ -172,7 +162,6 @@ body {
   }
 }
 
-/* Стрибок вгору-вниз */
 @keyframes jump {
   0%, 100% {
     transform: translateY(0);
